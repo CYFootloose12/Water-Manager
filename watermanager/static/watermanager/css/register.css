@@ -1,0 +1,28 @@
+body {
+    background: url("images/pic01.jpg") no-repeat;
+    background-width:100%;
+    color: white;
+}
+
+.message {
+  text-align: center;
+  position: fixed;
+  top: 15%;
+  left: 25%;
+  width: 50%;
+}
+table {
+	margin-left: 20%;
+}
+
+p {
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	font-size: x-large;
+}
+
+a { 
+   text-decoration: none;
+   color: #00CED1;
+}

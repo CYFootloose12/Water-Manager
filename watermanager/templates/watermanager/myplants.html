@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>My Plants</title>
+		{% load staticfiles %}
+		<meta name="viewport" content="width=1200,user-scalable=no" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    	<link rel="stylesheet" type="text/css" href="{% static 'watermanager/css/bootstrap-3.3.2-dist/css/bootstrap.css' %}" />
+		<link rel="stylesheet" href="{% static 'watermanager/css/myplants.css' %}" />
+		<script src="{% static 'watermanager/js/jquery.min.js' %}"></script> 
+		<script src="{% static 'watermanager/js/slider.js' %}"></script>
+	</head>
+	<body>
+        <div id="bs-example-navbar-collapse-1" class="navbar-inverse">
+            <ul class="nav navbar-nav">
+            	<li class="active"><a href="#">My Plants</a></li>
+            	<li><a href="{% url 'my_weather' %}">Weather</a></li>
+				<li><a href="{% url 'notifications' %}">Notifications</a></li>
+				<li><a href="{% url 'logout' %}">Logout</a>
+            </ul>
+        </div>
+
+        <div id="errors">
+        	{% for error in errors %}
+        		{{error}}
+        	{% endfor %}
+        </div>
+
+	   	<div class = "carousel">
+			<ul class="plantImages" style="list-style-type: none; margin-left: -2em;">
+	   			{% for plant in plants %}
+				{% load staticfiles %}
+				<li id="{{plant.id}}" class="hideable" style="display: none;">
+					{% static "watermanager" as baseUrl %}
+					<img src="{{ baseUrl }}/images/{{plant.type}}.png"></img>				
+				</li>
+				{% endfor %}
+			</ul>
+	    </div>
+
+	    <span class = "display">
+	    	<ul>
+			    {% for plant in plants %}
+					{% load staticfiles %}
+					<li>
+						<ul>
+				    		<h4>{{plant.name}}</h4>
+				    		<li class = "plant">
+								{% static "watermanager" as baseUrl %}
+								<img src="{{ baseUrl }}/images/{{plant.type}}.png"></img>
+							</li>
+				        	<li>
+				        		<form method="post" action="{% url 'schedule' plant.id %}">
+				        			<input type="submit" class="btn btn-default" value="Schedule" style = "margin-left: 5%; margin-top: 5%; padding: 2%; float: left; font-weight: bold">
+							        {% csrf_token %}
+				        		</form>
+				        	</li>
+				        	<li>
+				        		<form method="post" action="{% url 'delete_plant' plant.id %}">
+				        			<input type="submit" class="btn btn-default" value="Delete" style = "margin-left: 5%; margin-top: 5%; padding: 2%; float: left; font-weight: bold">
+				        			{% csrf_token %}
+				        		</form>
+				        	</li>
+						</ul>
+					</li>
+	    		{% endfor %}
+	    		{% for count in numPlants %}
+					<li class = "addplantcontainer">
+						<ul>
+	    					<li class = "addplant">
+	    						<a href= "{% url 'add_plant' %}">Add Plant</a>
+	    					</li>
+						</ul>
+					</li>
+	    		{% endfor %}
+	    	</ul>
+	    </span>
+
+
+	</body>
+</html>

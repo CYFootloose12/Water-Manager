@@ -1,0 +1,33 @@
+#wrap {
+   width:100%;
+   margin:0 auto;
+}
+
+#plant-data {
+   float: left;
+   width: 50%;
+}
+
+#plant-data > h2 {
+	margin-left: 40px;
+}
+
+#plant-data div {
+	margin-left: 40px;
+}
+
+#data-visualization {
+   float:right;
+   width: 50%;
+}
+
+#data-visualization div {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	margin-right: 50px;
+}
+
+#data-visualization svg {
+	width: 500px;
+	height: 300px;
+}

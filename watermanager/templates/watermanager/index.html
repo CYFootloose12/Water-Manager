@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Water Manager</title>
+    	{% load staticfiles %}
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<script src="{% static 'watermanager/js/jquery.min.js' %}"></script>
+		<script src="{% static 'watermanager/js/jquery.scrollex.min.js' %}"></script>
+		<script src="{% static 'watermanager/js/jquery.scrolly.min.js' %}"></script>
+		<script src="{% static 'watermanager/js/skel.min.js' %}"></script>
+		<script src="{% static 'watermanager/js/init.js' %}"></script>
+		<link rel="stylesheet" href="{% static 'watermanager/css/skel.css' %}" />
+		<link rel="stylesheet" href="{% static 'watermanager/css/style.css' %}" />
+		<link rel="stylesheet" href="{% static 'watermanager/css/style-large.css' %}" />
+	</head>
+	<body>
+		<!-- Header -->
+			<section id="header" style = "margin-top: 0%">
+    			{% load staticfiles %}
+				<span class="image fit primary"><img src="{% static 'watermanager/images/pic01.jpg' %}" alt="" /></span>
+				<header class="major">
+					<h1>Water Manager</h1>
+					<p>Taking care of your plants has never been easier.</p>
+				</header>
+				<div class="container">
+					<ul class="actions" style = "display: inline;">
+						<li><a href="{% url 'register' %}" class = "button" style = "color: green;">Register</a></li>
+						<li>or</li>
+						<li><a href="#one" class="button special scrolly">Begin</a></li>
+					</ul>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main special">
+				<div class="container">
+	    			{% load staticfiles %}
+					<span class="image fit primary"><img src="{% static 'watermanager/images/pic02.jpg' %}" alt="" /></span>
+					<div class="content">
+						<header class="major">
+							<h2>What is Water Manager?</h2>
+						</header>
+						<p>
+							Heading off on a plane for your dream vacation, 
+							when suddenly you realize you've forgotten to find
+							someone to take care of your beloved pet Fern? Or maybe
+							you have just bought a brand new Dracaena, but have
+							no idea on how much or how often to water it.
+							Well look no further because Water Manager will let 
+							you take care of your plants from wherever you go!
+						</p>
+					</div>
+					<a href="#two" class="goto-next scrolly">Next</a>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="main special">
+				<div class="container">
+    				{% load staticfiles %}
+					<span class="image fit primary"><img src="{% static 'watermanager/images/pic03.jpg' %}" alt="" /></span>
+					<div class="content">
+						<header class="major">
+							<h2>Features</h2>
+						</header>
+						<p></p>
+						<ul class="icons-grid">
+							<li>
+								<span class="icon major fa-calendar"></span>
+								<h3>Scheduler</h3>
+							</li>
+							<li>
+								<span class="icon major fa-skyatlas"></span>
+								<h3>Weather Updates</h3>
+							</li>
+							<li>
+								<span class="icon major fa-bar-chart"></span>
+								<h3>Data Analysis Charts</h3>
+							</li>
+							<li>
+								<span class="icon major fa-wifi"></span>
+								<h3>Wifi Controlled</h3>
+							</li>
+						</ul>
+					</div>
+					<a href="#four" class="goto-next scrolly">Next</a>
+				</div>
+			</section>
+
+
+			<section id="four" class="main">
+				<div class="container">
+    				{% load staticfiles %}
+					<span class="image fit primary"><img src="{% static 'watermanager/images/pic04.jpg' %}" alt="" /></span>
+					<div class="content">
+						<header class="major">
+							<h2>Happy Plants, Happy Life</h2>
+						</header>
+						<form method="post" action="{% url 'django.contrib.auth.views.login' %}">
+							<span>
+								Username: {{form.username}}
+							</span>
+							<span>
+								Password: {{form.password}}
+							</span>
+					        <button type="submit" class="btn btn-default" value="Login" style = "margin-left: 40%; margin-top: 5%;">Login</button>
+					        <input type="hidden" name="next" value="{{ next }}" />
+							{% csrf_token %}
+						</form>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<div>&copy; Water Manager</div>
+	</body>
+</html>

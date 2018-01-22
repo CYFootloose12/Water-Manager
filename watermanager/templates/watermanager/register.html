@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Social Network</title>
+    {% load staticfiles %}
+    <link href="{% static 'watermanager/css/register.css' %}" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+    <div class = "message">
+        <h2>
+            Fill out the form and register.
+        </h2>
+
+        <form method="post" action="{% url 'register' %}">
+            <table>
+                {{form}}
+            </table>
+            {% csrf_token %}
+            <button type="submit" class="btn btn-default" value="Login">Register</button>
+        </form>
+    </div
+</body>
+</html>

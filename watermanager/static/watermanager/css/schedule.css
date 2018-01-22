@@ -1,0 +1,158 @@
+body {
+    background: url("images/pic01.jpg") repeat;
+    background-width:100%;
+}
+
+.navbar-inverse {
+  padding-bottom: 3.5%;
+}
+
+.navbar-inverse > ul {
+  width: 100%;
+  text-align: center;
+}
+
+.navbar-inverse > ul > li {
+  display: inline-block;
+  margin-right: 9%;
+  margin-left: 9%;
+  margin-bottom: 1%;
+}
+
+
+
+.plantInfo {
+	background-color: white;
+	width: 50%;
+	margin-left: 25%;
+	border-radius: 40px;
+	padding: 2%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	text-align: center;
+	display: inline-block;
+}
+
+.plantInfo > .picture {
+	display: inline;
+	font-size: 20px;
+}
+
+.plantInfo > .picture > img {
+	float: left;
+	margin-left: 15px;
+	border-radius: 30px;
+  	border:5px solid black;
+}
+
+.plantInfo > .other {
+	width: 40%;
+	display: inline;
+}
+
+.plantInfo > .other > #city {
+	float: left;
+}
+
+.plantInfo > .other > #state {
+	float: left;
+}
+
+.plantInfo > .other > #location {
+	margin-left: 10%;
+	float: left;
+}
+
+.plantInfo > .other > #zip {
+	float: left;
+}
+
+.plantInfo > .other > #comma {
+	float: left;
+}
+
+#charts {
+	width: 33%;
+	float: left;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+#charts > #temperatures{
+	width: 100%;
+	float: left;
+	margin-top: 1%;
+	margin-bottom: 3%;
+}
+
+#charts > #precipitation{
+	width: 100%;
+	float: left;
+	margin-top: 1%;
+	margin-bottom: 3%;
+}
+
+#charts > #humidity{
+	width: 100%;
+	float: left;
+	margin-top: 1%;
+	margin-bottom: 3%;
+}
+
+#calendar > .fc-toolbar {
+  width: 55%;
+  float: left;
+  background-color: white;
+  margin-left: 3%;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#calendar > .fc-view-container {
+  width: 60%;
+  float: left;
+  background-color: white;
+}
+
+#scheduling {
+  background-color: white;
+  width: 50%;
+  height: 100%;
+  margin-left: 42%;
+  margin-top: 10%;
+  text-align: center;
+  padding: 4%;
+}
+
+#scheduling > #month {
+  margin-left: 20%;
+  float: left;
+}
+
+#scheduling > #comma1 {
+  float: left;
+}
+
+#scheduling > #comma2 {
+  float: left;
+}
+
+#scheduling > #day {
+  float: left;
+}
+
+#scheduling > #year {
+  float: left;
+}
+
+#scheduling > #event {
+  margin-left: 5%;
+  margin-top: 4%;
+  float: left;
+}
+
+#scheduling > #AI {
+  margin-left: 5%;
+  margin-top: 4%;
+  float: left;
+}

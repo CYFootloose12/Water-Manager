@@ -1,0 +1,46 @@
+body {
+    background: url("images/pic01.jpg") no-repeat;
+    background-width:100%;
+}
+
+.navbar-inverse {
+  margin-top: -3.7%;
+  padding-bottom: 3.5%;
+}
+
+.navbar-inverse > ul {
+  width: 100%;
+  text-align: center;
+}
+
+.navbar-inverse > ul > li {
+  display: inline-block;
+  margin-right: 9%;
+  margin-left: 9%;
+  margin-bottom: 0%;
+}
+
+#myPlants {
+	margin-left: 7%;
+	margin-right: auto;
+	margin-top: 5%;
+	width: 100%;
+}
+
+#myPlants ul {
+	margin: auto;
+	list-style-type: none;
+
+}
+
+#myPlants > ul > li{
+	height: 400px;
+	width: 200px;
+	display: inline-block;
+	padding: 2%;
+	border-radius: 40px;
+	text-align: center;
+	list-style-type: none;
+	background-color: #52CCCC;
+	margin-right: 2%;
+}

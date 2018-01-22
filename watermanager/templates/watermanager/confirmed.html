@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Social Network</title>
+    {% load staticfiles %}
+    <link href="{% static 'watermanager/css/confirmed.css' %}" rel="stylesheet" type="text/css"/>
+</head>
+
+{% load staticfiles %}
+<body>
+    <div class = "message">
+		<p> Thank you for confirming your email address.
+		Please <a href="{% url 'home' %}">login</a> to access your Water Manager.</p>
+    </div>
+</body>
+</html>

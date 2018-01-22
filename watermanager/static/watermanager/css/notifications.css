@@ -1,0 +1,72 @@
+body {
+    background: url("images/pic01.jpg") repeat;
+    background-width:100%;
+}
+
+.navbar-inverse {
+  padding-bottom: 3.5%;
+}
+
+.navbar-inverse > ul {
+  width: 100%;
+  text-align: center;
+}
+
+.navbar-inverse > ul > li {
+  display: inline-block;
+  margin-right: 9%;
+  margin-left: 9%;
+  margin-bottom: 1%;
+}
+
+h3 {
+	text-align: center
+}
+
+#watering-info {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: white;
+	border-radius: 5px;
+	padding: 10px 10px 10px 10px;
+}
+
+#days {
+	margin-left: -4%;
+	list-style-type: none;
+} 
+
+#days > li {
+	margin-top: 20px;
+	text-align: center;
+}
+
+#plants {
+	margin-top: -2%;
+	margin-left: -4%;
+	list-style-type: none;
+}
+
+#reminder {
+	width: 50%;
+	margin-top: 5%; 
+	margin-left: 25%;
+	padding: 2%; 
+	font-weight: bold;
+}
+
+#message {
+  text-align: center;
+  color: white;
+  margin-bottom: 10px;
+}
+
+button {
+	margin-top: 20px;
+	margin-left: 38%;
+
+	width: 200px;
+}

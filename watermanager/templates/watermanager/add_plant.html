@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">	
+	{% load staticfiles %}
+    <link href="{% static 'watermanager/css/bootstrap-3.3.2-dist/css/bootstrap.css' %}" rel="stylesheet"/>\
+    <link href="{% static 'watermanager/css/add_plant.css' %}" rel="stylesheet" />
+    <script src="{% static 'watermanager/js/add_plant.js' %}" type="text/javascript"></script>
+    <script src="{% static 'watermanager/js/jquery-2.1.3.min.js' %}" type="text/javascript"></script>
+</head>
+<body>
+    <div class="navbar-inverse">
+        <ul class="nav navbar-nav">
+        	<li class="active"><a href="{% url 'myplants' %}">My Plants</a></li>
+        	<li><a href="{% url 'my_weather' %}">Weather</a></li>
+			<li><a href="#">Statistics</a></li>
+			<li><a href="{% url 'logout' %}">Logout</a>
+        </ul>
+    </div>
+
+	<h3 class="instructions">
+	Please enter your plant's location (zip code) and click on your plant's type below.
+	</h3>
+    <form method="post" action="{% url 'add_plant' %}">
+        <table>
+            {{form}}
+        </table>
+        <ul class="photo-grid">
+		<li>
+
+			<input type="image" src="{% static 'watermanager/images/aloe_vera.png' %}" onmouseover="changeType('Aloe Vera')" value="Create" height="200" width="200" />
+			<figcaption><p>Aloe Vera</p></figcaption>
+
+		</li>
+		<li>
+			<input type="image" src="{% static 'watermanager/images/cactus.png' %}" onmouseover="changeType('Cactus')" value="Create" height="200" width="200" />
+			<figcaption><p>Cactus</p></figcaption>
+		</li>
+		<li>
+			<input type="image" src="{% static 'watermanager/images/daisy.png' %}" onmouseover="changeType('Daisy')" value="Create" height="200" width="200" />
+			<figcaption><p>Daisy</p></figcaption>
+		</li>
+		<li>
+			<input type="image" src="{% static 'watermanager/images/fern.png' %}" onmouseover="changeType('Fern')" value="Create" height="200" width="200" />
+			<figcaption><p>Fern</p></figcaption>
+		</li>
+		<li>
+			<input type="image" src="{% static 'watermanager/images/garden_sage.png' %}" onmouseover="changeType('Garden Sage')" value="Create" height="200" width="200" />
+			<figcaption><p>Garden Sage</p></figcaption>
+		</li>
+		<li>
+			<input type="image" src="{% static 'watermanager/images/lavendar.png' %}" onmouseover="changeType('Lavendar')" value="Create" height="200" width="200" />
+			<figcaption><p>Lavendar</p></figcaption>
+		</li>
+		<li>
+			<input type="image" src="{% static 'watermanager/images/mint.png' %}" onmouseover="changeType('Mint')" value="Create" height="200" width="200" />
+			<figcaption><p>Mint</p></figcaption>
+		</li>
+		<li>
+			<input type="image" src="{% static 'watermanager/images/orchid.png' %}" onmouseover="changeType('Orchid')" value="Create" height="200" width="200" />
+			<figcaption><p>Orchid</p></figcaption>
+		</li>
+	</ul>
+	<ul class="photo-grid">
+		<li>
+			<input type="image" src="{% static 'watermanager/images/oregano.png' %}" onmouseover="changeType('Oregano')" value="Create" height="200" width="200" />
+			<figcaption><p>Oregano</p></figcaption>
+		</li>
+		<li>
+			<input type="image" src="{% static 'watermanager/images/petunia.png' %}" onmouseover="changeType('Petunia')" value="Create" height="200" width="200" />
+			<figcaption><p>Petunia</p></figcaption>
+		</li>
+		<li>
+			<input type="image" src="{% static 'watermanager/images/rose.png' %}" onmouseover="changeType('Rose')" value="Create" height="200" width="200" />
+			<figcaption><p>Rose</p></figcaption>
+		</li>
+		<li>
+			<input type="image" src="{% static 'watermanager/images/rosemary.png' %}" onmouseover="changeType('Rosemary')" value="Create" height="200" width="200" />
+			<figcaption><p>Rosemary</p></figcaption>
+		</li>
+		<li>
+			<input type="image" src="{% static 'watermanager/images/snake_plant.png' %}" onmouseover="changeType('Snake Plant')" value="Create" height="200" width="200" />
+			<figcaption><p>Snake Plant</p></figcaption>
+		</li>
+		<li>
+			<input type="image" src="{% static 'watermanager/images/spider_plant.png' %}" onmouseover="changeType('Spider Plant')" value="Create" height="200" width="200" />
+			<figcaption><p>Spider Plant</p></figcaption>
+		</li>
+		<li>
+			<input type="image" src="{% static 'watermanager/images/sunflower.png' %}" onmouseover="changeType('Sunflower')" value="Create" height="200" width="200" />
+			<figcaption><p>Sunflower</p></figcaption>
+		</li>
+		<li>
+			<input type="image" src="{% static 'watermanager/images/violet.png' %}" onmouseover="changeType('Violet')" value="Create" height="200" width="200" />
+			<figcaption><p>Violet</p></figcaption>
+		</li>
+	</ul>
+        {% csrf_token %}
+    </form>
+</body>
+</html>
